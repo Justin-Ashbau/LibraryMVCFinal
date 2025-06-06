@@ -49,6 +49,8 @@ public class LibraryView extends JFrame{
         libPanel.add(searchField);
         libPanel.add(searchUserButton);
         libPanel.add(searchBookButton);
+        libPanel.add(searchAuthorButton);
+        libPanel.add(searchPublisherButton);
         libPanel.add(new JScrollPane(responseArea));
 
         this.add(libPanel);
