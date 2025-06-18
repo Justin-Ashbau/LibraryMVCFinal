@@ -26,6 +26,8 @@ public class LibraryController {
         this.libraryView.searchBookListener(new SearchBookButtonListener());
         this.libraryView.searchAuthorListener(new SearchAuthorButtonListener());
         this.libraryView.searchPublisherListener(new SearchPublisherListener());
+        this.libraryView.sortByCreatedListener(new SortByCreatedListener());
+        this.libraryView.sortByCheckedListener(new SortByCheckedListener());
     }
 
     class NewUserButtonListener implements ActionListener {
@@ -94,6 +96,18 @@ public class LibraryController {
 
         public void actionPerformed(ActionEvent e) {
             libraryView.setResponse(library.searchByPublisher(libraryView.getQuery()));
+        }
+    }
+    class SortByCreatedListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            libraryView.setResponse(library.sortByCreated());
+        }
+    }
+    class SortByCheckedListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            libraryView.setResponse(library.sortByChecked());
         }
     }
 }
