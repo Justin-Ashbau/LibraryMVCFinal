@@ -23,6 +23,8 @@ public class LibraryView extends JFrame{
     private JButton searchBookButton = new JButton("Search book");
     private JButton searchAuthorButton = new JButton("Search author");
     private JButton searchPublisherButton = new JButton("Search publisher");
+    private JButton sortByCreatedButton = new JButton("Sort created");
+    private JButton sortByCheckedButton = new JButton("Sort checked");
     private JTextArea responseArea = new JTextArea(12, 50);
 
 
@@ -51,6 +53,8 @@ public class LibraryView extends JFrame{
         libPanel.add(searchBookButton);
         libPanel.add(searchAuthorButton);
         libPanel.add(searchPublisherButton);
+        libPanel.add(sortByCreatedButton);
+        libPanel.add(sortByCheckedButton);
         libPanel.add(new JScrollPane(responseArea));
 
         this.add(libPanel);
