@@ -55,6 +55,13 @@ public class Book {
     public String getUser() {
         return user;
     }
+    public LocalDate getDateCreated() {
+        return dateCreated;
+    }
+
+    public LocalDate getDateChecked() {
+        return dateChecked;
+    }
 
     //Output
     public String printBook() {

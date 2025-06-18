@@ -1,6 +1,9 @@
 package model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Library {
     private ArrayList<Book> books;
@@ -153,6 +156,15 @@ public class Library {
             if(books.get(i).getPublisher().equals(publisherName)) {
                 s += books.get(i).printBook() + "\n";
             }
+        }
+        return s;
+    }
+    public String sortByCreated() {
+        String s = "";
+        ArrayList<Book> sortedBooks = books;
+        sortedBooks.sort(Comparator.comparing(Book::getDateCreated));
+        for(int i = 0; i < sortedBooks.size(); i++) {
+            s += books.get(i).printBook() + "\n";
         }
         return s;
     }
