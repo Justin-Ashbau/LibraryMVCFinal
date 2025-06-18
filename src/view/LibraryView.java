@@ -109,4 +109,10 @@ public class LibraryView extends JFrame{
     public void searchPublisherListener(ActionListener listenForSearchPublisherButton) {
         searchPublisherButton.addActionListener(listenForSearchPublisherButton);
     }
+    public void sortByCreatedListener(ActionListener listenForSortByCreatedButton) {
+        sortByCreatedButton.addActionListener(listenForSortByCreatedButton);
+    }
+    public void sortByCheckedListener(ActionListener listenForSortByCheckedButton) {
+        sortByCheckedButton.addActionListener(listenForSortByCheckedButton);
+    }
 }
