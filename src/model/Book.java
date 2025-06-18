@@ -1,11 +1,14 @@
 package model;
 
+import java.time.LocalDate;
+
 public class Book {
     private String name;
     private String author;
     private String publisher;
     private Status status;
     private String user;
+    private LocalDate dateCreated;
 
     //Constructor
     public Book(String name, String author, String publisher) {
@@ -14,6 +17,7 @@ public class Book {
         this.publisher = publisher;
         this.status = Status.AVAILABLE;
         this.user = "null";
+        this.dateCreated = LocalDate.now();
     }
 
     //Setters
