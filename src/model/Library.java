@@ -168,4 +168,13 @@ public class Library {
         }
         return s;
     }
+    public String sortByChecked() {
+        String s = "";
+        ArrayList<Book> sortedBooks = books;
+        sortedBooks.sort(Comparator.comparing(Book::getDateChecked));
+        for(int i = 0; i < sortedBooks.size(); i++) {
+            s += books.get(i).printBook() + "\n";
+        }
+        return s;
+    }
 }
