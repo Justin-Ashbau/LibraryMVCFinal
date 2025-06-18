@@ -9,6 +9,7 @@ public class Book {
     private Status status;
     private String user;
     private LocalDate dateCreated;
+    private LocalDate dateChecked;
 
     //Constructor
     public Book(String name, String author, String publisher) {
@@ -35,6 +36,7 @@ public class Book {
     }
     public void setUser(String user) {
         this.user = user;
+        this.dateChecked = LocalDate.now();
     }
 
     //Getters
